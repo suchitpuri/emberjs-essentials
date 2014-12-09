@@ -1,0 +1,8 @@
+{{#link-to 'commits.index'}}Back To Commits {{/link-to}}
+<h2>Commit {{model.sha}} detail </h2>
+<div id="logo">
+    <img {{bind-attr src=model.committer.avatar_url }} alt="Logo">
+</div>
+<div><b>Author : </b> {{model.commit.author.name}}</div>
+<div><b>Message : </b> {{model.commit.message}}</div>
+<div><b>URL : </b> <a {{bind-attr href=model.url}}>{{model.url}}</a></div>
