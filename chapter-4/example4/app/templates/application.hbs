@@ -1,0 +1,24 @@
+<div id="wrapper" class="active">
+    <!-- The Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav">
+            <li class="sidebar-brand" {{action 'toggleMenu'}} ><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+        </ul>
+        <ul class="sidebar-nav" id="sidebar">     
+            {{outlet sidebar}}    
+        </ul>
+    </div>
+    
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+    <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+            <div class="row">
+                <div class="col-md-12">
+                    {{outlet}}
+                </div>
+            </div>
+        </div>
+    </div>
+      
+</div>
