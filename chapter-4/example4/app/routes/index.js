@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     this.render('sidebar',{
         outlet: "sidebar"
     });
-    this.render('index')
+    this.render('index');
   }
 });
