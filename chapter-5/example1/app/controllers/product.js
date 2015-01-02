@@ -12,6 +12,5 @@ export default Ember.ObjectController.extend({
     shortDescription: function(){
         var shortDesc = this.get('description').substring(0, 25);
         return shortDesc + "...";
-
     }.property('description')
 });

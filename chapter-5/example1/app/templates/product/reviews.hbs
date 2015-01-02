@@ -1,0 +1,11 @@
+<h2> Reviews for {{product.name}}</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th data-field="name">Reviews</th>
+        </tr>
+        {{#each review in controller}}
+        <tr><td>{{review}}</td></tr>            
+        {{/each}}
+    </thead>
+</table>
