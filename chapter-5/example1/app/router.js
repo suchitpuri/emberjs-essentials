@@ -6,11 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.resource("products",function(){
-        this.resource("product",{path: "/:id"},function(){
-            this.route("reviews");
-        });
+    this.resource("products");
+    this.resource("product",{path: "/:id"},function(){
+        this.route("reviews");
     });
+
 });
 
 export default Router;
