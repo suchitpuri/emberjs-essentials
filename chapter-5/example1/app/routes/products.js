@@ -7,6 +7,6 @@ export default Ember.Route.extend({
                   "currency": "EURO" , "symbol": "€" , "price":"299.999","dimensions": {"length": 8.0,"width": 11.0,"height": 10.0}},{ "name" : "T Shirt" , "description" : "A very long T Shirt desction which cannot be shon inside a table and will have to be shortened",
                   "currency": "USD" , "symbol": "$" , "price":"58.999","dimensions": {"length": 9.0,"width": 13.0,"height": 11.0}},{ "name" : "White Shirt" , "description" : "A very long Shirt desction which cannot be shon inside a table and will have to be shortened",
                   "currency": "GBP" , "symbol": "£" , "price":"1999.9999","dimensions": {"length": 10.0,"width": 14.0,"height": 12.0}}
-                ]
+                ];
     }
 });
