@@ -5,5 +5,6 @@ export default DS.Model.extend({
   isbn: DS.attr('string'),
   pages: DS.attr('number'),
   description: DS.attr('string'),
-  authors: DS.hasMany('author')
+  authors: DS.hasMany('author'),
+  publisher: DS.belongsTo('publisher')
 });
