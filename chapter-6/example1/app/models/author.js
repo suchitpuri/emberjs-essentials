@@ -7,5 +7,5 @@ export default DS.Model.extend({
     return this.get('firstName') + ' ' + this.get('lastName');
   }.property('firstName', 'lastName'),
   bio: DS.attr('string'),
-  book: DS.belongsTo('book')
+  book: DS.hasMany('book')
 });

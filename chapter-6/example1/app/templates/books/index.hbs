@@ -1,0 +1,7 @@
+
+Here Are The List Of Books Fetched From The Server
+<ul>
+{{#each book in model}}
+    <li>{{#link-to 'books.book' book}}{{{book.title}}}{{/link-to}}</li>
+{{/each}}
+</ul>
