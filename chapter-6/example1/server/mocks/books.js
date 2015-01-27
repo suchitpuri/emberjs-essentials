@@ -1,6 +1,11 @@
 module.exports = function(app) {
   var express = require('express');
+  var bodyParser = require('body-parser');
   var booksRouter = express.Router();
+  
+  // parse application/json
+  app.use(bodyParser.json());
+
 
   booksRouter.get('/', function(req, res) {
       res.send({
@@ -30,7 +35,10 @@ module.exports = function(app) {
   });
 
   booksRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201);
+    res.send({"book":{
+      "id":Math.floor(Math.random()*1000)
+    }});
   });
 
   booksRouter.get('/:id', function(req, res) {

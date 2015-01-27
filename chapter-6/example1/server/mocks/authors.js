@@ -1,6 +1,11 @@
 module.exports = function(app) {
   var express = require('express');
   var authorsRouter = express.Router();
+  var bodyParser = require('body-parser');  
+  // parse application/json
+  
+  app.use(bodyParser.json());
+
 
   authorsRouter.get('/', function(req, res) {
     var authors = []
@@ -22,7 +27,13 @@ module.exports = function(app) {
   });
 
   authorsRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201);
+    res.send({
+      "author":{
+        "id":Math.floor(Math.random()*1000),
+        "firstName": req.body.author.firstName
+      }
+    });
   });
 
   authorsRouter.get('/:id', function(req, res) {

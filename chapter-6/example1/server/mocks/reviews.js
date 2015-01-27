@@ -20,7 +20,10 @@ module.exports = function(app) {
   });
 
   reviewsRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201);
+    res.send({
+      "review":{"id":Math.floor(Math.random()*1000)}
+    });
   });
 
   reviewsRouter.get('/:id', function(req, res) {

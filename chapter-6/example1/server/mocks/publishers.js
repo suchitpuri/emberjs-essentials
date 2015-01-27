@@ -9,7 +9,10 @@ module.exports = function(app) {
   });
 
   publishersRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201);
+    res.send({
+      "publisher":{"id":Math.floor(Math.random()*1000)}
+    });
   });
 
   publishersRouter.get('/:id', function(req, res) {
