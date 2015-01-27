@@ -15,7 +15,11 @@ module.exports = function(app) {
   publishersRouter.get('/:id', function(req, res) {
     res.send({
       "publishers": {
-        "id": req.params.id
+        "id": req.params.id,
+        "name": "Packt Publishing",
+        "organizationName": "Pact",
+        "address":"Packt Publishing London",
+        "book":1
       }
     });
   });

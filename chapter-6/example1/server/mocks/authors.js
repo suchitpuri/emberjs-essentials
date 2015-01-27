@@ -3,8 +3,21 @@ module.exports = function(app) {
   var authorsRouter = express.Router();
 
   authorsRouter.get('/', function(req, res) {
+    var authors = []
+    if(req.query.ids){
+      req.query.ids.forEach(function(element){
+        authors.push({
+          "id": parseInt(element),
+          "firstName": "Author" + element,
+          "lastName" : "LastName" + element,
+          "bio": "Great Guy",
+          "books":[1]
+        });
+      });  
+    }
+    
     res.send({
-      "authors": []
+      "authors": authors
     });
   });
 
@@ -14,8 +27,12 @@ module.exports = function(app) {
 
   authorsRouter.get('/:id', function(req, res) {
     res.send({
-      "authors": {
-        "id": req.params.id
+      "author": {
+        "id": req.params.id,
+        "firstName": "firstName" + req.params.id,
+        "lastName" : "LastName" + req.params.id,
+        "bio": "Great Guy",
+        "book":[1]
       }
     });
   });

@@ -7,3 +7,28 @@
 <li> pages: {{model.pages}} </li>
 <li> description: {{model.description}} </li>
 </ul>
+
+
+<h3>Publisher Details</h3>
+<ul>
+<li> Publisher Name: {{model.publisher.name}}</li>
+<li> Publisher Organization Name: {{model.publisher.organizationName}}</li>
+<li>Publisher Address: {{model.publisher.address}}</li>
+</ul>
+
+<h3>Author Details</h3>
+<ul>
+{{#each author in model.authors}}
+    <li>{{author.fullName}}</li>
+    <li>{{author.bio}}
+{{/each}}
+</ul>
+
+
+<h3>Reviews</h3>
+{{#each review in model.reviews}}
+<ul>
+    <li>{{review.name}}</li>
+    <li>{{review.comment}}
+</ul>
+{{/each}}
