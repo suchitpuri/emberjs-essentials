@@ -1,10 +1,6 @@
 module.exports = function(app) {
   var express = require('express');
   var authorsRouter = express.Router();
-  var bodyParser = require('body-parser');  
-  // parse application/json
-  
-  app.use(bodyParser.json());
 
 
   authorsRouter.get('/', function(req, res) {
@@ -30,27 +26,32 @@ module.exports = function(app) {
     res.status(201);
     res.send({
       "author":{
-        "id":Math.floor(Math.random()*1000),
-        "firstName": req.body.author.firstName
+        "id":Math.floor(Math.random()*1000)
       }
     });
   });
 
   authorsRouter.get('/:id', function(req, res) {
+    var book;
+    if(req.params.id == "1"){
+      book=1
+    }else if(req.params.id == "2"){
+      book = 2
+    }
     res.send({
       "author": {
         "id": req.params.id,
         "firstName": "firstName" + req.params.id,
         "lastName" : "LastName" + req.params.id,
         "bio": "Great Guy",
-        "book":[1]
+        "book":[book]
       }
     });
   });
 
   authorsRouter.put('/:id', function(req, res) {
     res.send({
-      "authors": {
+      "author": {
         "id": req.params.id
       }
     });

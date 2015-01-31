@@ -10,7 +10,7 @@ module.exports = function(app) {
           "id": parseInt(element),
           "name": "Reviewer " + element,
           "comment": "comment " + element,
-          "books":[1]
+          "book":1
         });
       });  
     }
@@ -27,19 +27,25 @@ module.exports = function(app) {
   });
 
   reviewsRouter.get('/:id', function(req, res) {
+    var book;
+    if(req.params.id == "1" || req.params.id == "2" || req.params.id == "3" ){
+      book = 1
+    }else if(req.params.id == "4" || req.params.id == "5" || req.params.id == "6" ){
+      book = 2
+    }
     res.send({
-      "reviews": {
+      "review": {
         "id": parseInt(req.params.id),
         "name": "Reviewer " + req.params.id,
         "comment": "comment " + req.params.id,
-        "books":[1]
+        "book":book
       }
     });
   });
 
   reviewsRouter.put('/:id', function(req, res) {
     res.send({
-      "reviews": {
+      "review": {
         "id": req.params.id
       }
     });

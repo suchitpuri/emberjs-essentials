@@ -16,20 +16,27 @@ module.exports = function(app) {
   });
 
   publishersRouter.get('/:id', function(req, res) {
+    var book;
+    if(req.params.id == 1){
+      book = 1 
+
+    }else if(req.params.id == 2){
+      book = 2
+    }
     res.send({
-      "publishers": {
+      "publisher": {
         "id": req.params.id,
         "name": "Packt Publishing",
         "organizationName": "Pact",
         "address":"Packt Publishing London",
-        "book":1
+        "book":book
       }
     });
   });
 
   publishersRouter.put('/:id', function(req, res) {
     res.send({
-      "publishers": {
+      "publisher": {
         "id": req.params.id
       }
     });
