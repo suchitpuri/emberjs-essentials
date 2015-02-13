@@ -1,3 +1,8 @@
 html, body {
-  margin: 20px;
+  margin: 20px;  
 }
+footer {
+    position: relative;
+    margin-top: 200px;
+}
+
