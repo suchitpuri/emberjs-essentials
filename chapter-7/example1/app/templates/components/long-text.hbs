@@ -1,0 +1,11 @@
+<p>
+This is a long text and we intend to show only this much unless the user presses the show more button below.
+</p>
+{{#if showMoreText}}
+    This is the remaining text that should be visible when we press the show more button. Ideally this should contain a lot more text, but for example's sake this should be enough.
+    <br>
+    <br>
+    <button {{action "toggleMore"}}> Show Less </button>
+{{else}}
+    <button {{action "toggleMore"}}> Show More </button>
+{{/if}}
