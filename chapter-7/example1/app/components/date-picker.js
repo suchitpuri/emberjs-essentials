@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
  actions:{
-   click: function(){
+   submit: function(){
     var date = this.$("input").val();
     this.sendAction('action',date);
    } 
