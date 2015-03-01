@@ -1,0 +1,2 @@
+h2 Welcome to Ember.js Application, it uses Emblem.js, the concise indentatin based templating library
+  = outlet
