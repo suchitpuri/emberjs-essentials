@@ -1,0 +1,15 @@
+<table id="t01">
+      <tr>
+        <th>Company Name</th>
+        <th>Headquaters</th> 
+        <th>revenue</th>
+      </tr>
+      {{#each item in model}}
+        <tr>
+          <td class="{{unbound item.name}}">{{item.name}}</td>
+          <td {{bind-attr class="className"}}>{{item.headquaters}}</td>
+          <td>{{item.revenue}}</td>
+        </tr>
+      {{/each}}
+</table>
+    <button {{action "toggleColor"}}> Change color </button>
