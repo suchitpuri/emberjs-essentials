@@ -14,7 +14,7 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
-myUser = user.create({
+var myUser = user.create({
   firstName: "suchit",
   lastName: "puri"
 });
