@@ -20,8 +20,8 @@ export default function(){
 		derivedProperty:false
 	});
 	
-	var derviedObject = derived.create();
+	var derivedObject = derived.create();
 	
-	console.log(derviedObject.get('baseProperty'));
-	console.log(derviedObject.get('derivedProperty'));
+	console.log(derivedObject.get('baseProperty'));
+	console.log(derivedObject.get('derivedProperty'));
 }
