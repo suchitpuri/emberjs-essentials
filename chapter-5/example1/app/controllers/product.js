@@ -3,7 +3,7 @@ import Ember from "ember";
 export default Ember.ObjectController.extend({
     formattedPrice: function(){
         return this.get('symbol') + "   " + $.number(this.get('price'),2);
-    }.property('currency','symbol','price'),
+    }.property('symbol','price'),
 
     formattedDimension: function(){
         return this.get('dimensions.width') + " x "  + this.get('dimensions.height') + " x " + this.get('dimensions.length');
