@@ -1,13 +1,13 @@
 <table id="t01">
       <tr>
         <th>Company Name</th>
-        <th>Headquaters</th> 
+        <th>Headquarters</th> 
         <th>revenue</th>
       </tr>
       {{#each item in model}}
         <tr>
           <td {{action "alert" "alert form company name" }}>{{item.name}}</td>
-          <td {{action "alert" "alert form company headquaters" }}>{{item.headquaters}}</td>
+          <td {{action "alert" "alert form company headquarters" }}>{{item.headquarters}}</td>
           <td {{action "alert" "alert form revenue" }}>{{item.revenue}}</td>
         </tr>
       {{/each}}
