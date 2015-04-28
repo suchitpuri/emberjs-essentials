@@ -78,16 +78,16 @@ define('example3/routes/index', ['exports', 'ember'], function (exports, Ember) 
     model: function model() {
       var companies = [{
         name: "Google",
-        headquaters: "Mountain View, California, United States of America",
+        headquarters: "Mountain View, California, United States of America",
         revenue: "59825000000"
       }, {
         name: "Facebook",
-        headquaters: "Menlo Park, California,United States of America",
+        headquarters: "Menlo Park, California,United States of America",
         revenue: "7870000000"
       }, {
         name: "twitter",
         revenue: "664000000",
-        headquaters: "San Francisco, California, United States of America"
+        headquarters: "San Francisco, California, United States of America"
       }];
       return companies;
     }
@@ -204,7 +204,7 @@ define('example3/templates/index', ['exports'], function (exports) {
           var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),-1,-1);
           var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),-1,-1);
           content(env, morph0, context, "item.name");
-          content(env, morph1, context, "item.headquaters");
+          content(env, morph1, context, "item.headquarters");
           content(env, morph2, context, "item.revenue");
           return fragment;
         }
@@ -233,7 +233,7 @@ define('example3/templates/index', ['exports'], function (exports) {
         var el3 = dom.createTextNode("\n        ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("th");
-        var el4 = dom.createTextNode("Headquaters");
+        var el4 = dom.createTextNode("Headquarters");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode(" \n        ");
@@ -410,7 +410,7 @@ catch(err) {
 if (runningTests) {
   require("example3/tests/test-helper");
 } else {
-  require("example3/app")["default"].create({"name":"example3","version":"0.0.0.048571b2"});
+  require("example3/app")["default"].create({"name":"example3","version":"0.0.0.0544d50e"});
 }
 
 /* jshint ignore:end */
